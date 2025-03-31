@@ -43,7 +43,9 @@ const App=()=>{
     <div>
       <Header/>
       <main className='flex'>
-        <Box/>
+        <Box name="Conan" title="student" age="23" />
+        <Box name="Ran" title="student" age="23" />
+        <Box name="Mori" title="Detective" age="60" />
         <Grape/>
         <Orange/>
       </main>

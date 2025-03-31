@@ -1,4 +1,8 @@
-
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -8,13 +12,14 @@
 
 header,footer{
   background:rgb(245, 197, 205);
-  width: 500px;
+  width: 1000px;
   height:5rem;
 }
 header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 1rem;
 }
 ul{
   list-style: none;
@@ -25,9 +30,9 @@ ul{
 .box{
   background: rgb(248, 152, 168);
   box-shadow: 0 1px 2px grey;
-  width:100px;
-  padding: 1rem;
-  margin:1rem;
+  width:150px;
+  padding: 1.5rem;
+  margin: 2rem;
   border-radius: 0.5rem;
   font-weight: bold;
 }
