@@ -34,21 +34,20 @@
 
 // export default App
 
-import './App.css'
-import Box from './Box.jsx'
+import './App.css';
+import Box, {Orange, Grape} from './Box.jsx';
+import Header from './Header.jsx';
 
 const App=()=>{
   return(
     <div>
-      <header>
-        <h2>Logo</h2>
-      </header>
+      <Header/>
       <main className='flex'>
         <Box/>
-        <Box/>
-        <Box/>
+        <Grape/>
+        <Orange/>
       </main>
-      <footer>copyrights 🍉React🥬</footer>
+      <footer className='flex'>copyrights 🍉fruit🥬</footer>
     </div>
   )
 }

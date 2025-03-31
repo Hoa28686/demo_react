@@ -1,10 +1,30 @@
 const Box=()=>{
     return(
       <div className='box'>
-        <p>Name</p>
-        <p>Title</p>
-        <p>Age</p>
+        <p>Watermelon</p>
+        <p>Fruit</p>
+        <p>🍉</p>
       </div>
     )
     }
 export default Box
+
+export function Orange(){
+  return(
+    <div className='box'>
+      <p>Orange</p>
+      <p>Fruit</p>
+      <p>🍊</p>
+    </div>
+  )
+}
+
+export function Grape(){
+  return(
+    <div className='box'>
+      <p>Grape</p>
+      <p>Fruit</p>
+      <p>🍇</p>
+    </div>
+  )
+}
