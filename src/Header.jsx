@@ -1,7 +1,8 @@
-const Header=()=>{
+const Header=(props)=>{
+    console.log("this is header props: ", props);
     return(
     <header>
-        <div id="logo">Logo</div>
+        <div id="logo">{props.logo} </div>
         <nav>
             <ul>
             <li>Home</li>

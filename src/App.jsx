@@ -37,11 +37,12 @@
 import './App.css';
 import Box, {Orange, Grape} from './Box.jsx';
 import Header from './Header.jsx';
+import Footer from './Footer.jsx';
 
 const App=()=>{
   return(
     <div>
-      <Header/>
+      <Header logo="HL" />
       <main className='flex'>
         <Box name="Conan" title="student" age="23" />
         <Box name="Ran" title="student" age="23" />
@@ -49,7 +50,7 @@ const App=()=>{
         <Grape/>
         <Orange/>
       </main>
-      <footer className='flex'>copyrights 🍉fruit🥬</footer>
+      <Footer year={2025} />
     </div>
   )
 }
