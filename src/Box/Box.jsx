@@ -2,7 +2,7 @@ const Box=(props)=>{
     return(
       <div className='box'>
 
-        <p>Id: {props.id} </p>
+        <p >Id: {props.id} </p>
         <p>Name: {props.name} </p>
         <p>Title: {props.title} </p>
         <p>Age: {props.age} </p>

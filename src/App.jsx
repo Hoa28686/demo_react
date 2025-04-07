@@ -1,11 +1,15 @@
+import {useState} from'react';
 import './App.css';
-import Box, {Orange, Grape} from './Box.jsx';
-import Header from './Header.jsx';
-import Footer from './Footer.jsx';
+import './Box/Box.css';
+import './Header/Header.css';
+import './Footer/Footer.css';
+import Box, {Orange, Grape} from './Box/Box.jsx';
+import Header from './Header/Header.jsx';
+import Footer from './Footer/Footer.jsx';
 import { persons } from './personsData.js';
 
 const App=()=>{
-
+  // const [persons, setEmployee]=useState(persons);
   return(
     <div >
       <Header logo="HL" />
