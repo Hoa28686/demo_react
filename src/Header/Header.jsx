@@ -1,3 +1,4 @@
+import './Header.css';
 const Header=(props)=>{
     console.log("this is header props: ", props);
     return(

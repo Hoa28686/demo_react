@@ -1,13 +1,15 @@
+import './Box/Box.css';
 const Box=(props)=>{
     return(
       <div className='box'>
 
-        <p >Id: {props.id} </p>
+        {/* <p >Id: {props.id} </p>
         <p>Name: {props.name} </p>
         <p>Title: {props.title} </p>
         <p>Age: {props.age} </p>
         <p>Animal: {props.animal} </p>
-        <p>Salary: {props.salary} </p>
+        <p>Salary: {props.salary} </p> */}
+        
       </div>
     )
     }
