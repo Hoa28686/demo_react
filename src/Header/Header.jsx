@@ -1,9 +1,9 @@
 import './Header.css';
-const Header=(props)=>{
-    console.log("this is header props: ", props);
+const Header=({logo})=>{
+    console.log("this is header props: ", {logo});
     return(
     <header>
-        <div className="logo">{props.logo} </div>
+        <div className="logo">{logo} </div>
         <nav>
             <ul>
                 <li>Home</li>

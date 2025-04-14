@@ -14,13 +14,13 @@ const BookList=()=>{
 }
 export default BookList
 
-export function Card(props){
-    const departmentClass=props.deparment === "Engineer"
-    ?'engineer': props.deparment === "Design"? 'design':props.deparment === "Executive"?'executive':'general';
+export function Card({name, department}){
+    const departmentClass=deparment === "Engineer"
+    ?'engineer': deparment === "Design"? 'design':deparment === "Executive"?'executive':'general';
     return(
         <div className={`card ${departmentClass}`} >
-            <h3>{props.name}</h3>
-            <p>Department:{props.department}</p>
+            <h3>{name}</h3>
+            <p>Department:{department}</p>
         </div>
     )
 }

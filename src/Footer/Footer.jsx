@@ -1,8 +1,8 @@
 import './Footer.css';
-const Footer=(props)=>{
-    console.log('footer props: ', props);
+const Footer=({year})=>{
+    console.log('footer props: ', {year});
     return(
-        <footer className='flex'>copyrights 🍉fruit🥬 {props.year} </footer>
+        <footer className='flex'>copyrights 🍉fruit🥬 {year} </footer>
     )
 }
 export default Footer

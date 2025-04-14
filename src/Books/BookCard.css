@@ -13,3 +13,12 @@
   .price{
     color:yellow;
   }
+  button{
+    margin:0.8rem;
+    padding:0.5rem;
+    background: green;
+    font-size: inherit;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+
+  }
