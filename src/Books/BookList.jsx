@@ -1,10 +1,22 @@
+import { useState } from "react";
 import BookCard from "./BookCard";
 import { books } from "./booksData";
 
 const BookList=()=>{
+    const [bookData,setBookData]=useState(books);
+    // const clickHandler=()=>{
+    //     setFavorite(!favorite);
+    //     isFavorite=!isFavorite;
+    // }
+
     return(
         <>
-            {books.map(b=> (
+            <select name="" id="">
+                <option value="all">Show All</option>
+                <option value="favorite">Is Favorite</option>
+                <option value="notFavorite">Not favorite</option>
+            </select>
+            {bookData.map(b=> (
                       <BookCard
                       key={b.id}
                       {...b} />

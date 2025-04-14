@@ -1,13 +1,16 @@
 export const books=[
         {
+          isFavorite: false,
           id: 1,
           title: "The Psychology of Money",
           author: "Morgan Housel",
           price: 13.5,
           inStock: true,
-          genre: "Finance"
+          genre: "Finance",
+
         },
         {
+          isFavorite: true,
           id: 2,
           title: "Atomic Habits",
           author: "James Clear",
@@ -16,6 +19,7 @@ export const books=[
           genre: "Self-help"
         },
         {
+          isFavorite: false,
           id: 3,
           title: "The Let Them Theory",
           author: "Mel Robbins",
@@ -24,6 +28,7 @@ export const books=[
           genre: "Personal Development"
         },
         {
+          isFavorite: true,
           id: 4,
           title: "Educated",
           author: "Tara Westover",
@@ -32,6 +37,7 @@ export const books=[
           genre: "Memoir"
         },
         {
+          isFavorite: false,
           id: 5,
           title: "The Hobbit",
           author: "J.R.R. Tolkien",
@@ -40,6 +46,7 @@ export const books=[
           genre: "Fantasy"
         },
         {
+          isFavorite: false,
           id: 6,
           title: "Sapiens",
           author: "Yuval Noah Harari",
@@ -48,6 +55,7 @@ export const books=[
           genre: "History"
         },
         {
+          isFavorite: true,
           id: 7,
           title: "Becoming",
           author: "Michelle Obama",
@@ -56,6 +64,7 @@ export const books=[
           genre: "Biography"
         },
         {
+          isFavorite: false,
           id: 8,
           title: "Dune",
           author: "Frank Herbert",
@@ -64,6 +73,7 @@ export const books=[
           genre: "Science Fiction"
         },
         {
+          isFavorite: false,
           id: 9,
           title: "The Alchemist",
           author: "Paulo Coelho",
@@ -72,6 +82,7 @@ export const books=[
           genre: "Fiction"
         },
         {
+          isFavorite: false,
           id: 10,
           title: "The Silent Patient",
           author: "Alex Michaelides",
