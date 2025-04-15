@@ -9,7 +9,7 @@ const App=()=>{
     <>
       <Header logo="HL" />
         <h1>Demo App</h1>
-      <main className="flex" >
+      <main  >
         <BookList/>
       </main>
       <Footer year={2025} />
