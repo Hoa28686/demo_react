@@ -1,6 +1,6 @@
 import './Header.css';
 const Header=({logo})=>{
-    console.log("this is header props: ", {logo});
+    // console.log("this is header props: ", {logo});
     return(
     <header>
         <div className="logo">{logo} </div>

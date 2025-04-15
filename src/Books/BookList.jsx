@@ -4,22 +4,40 @@ import { books } from "./booksData";
 
 const BookList=()=>{
     const [bookData,setBookData]=useState(books);
-    // const clickHandler=()=>{
-    //     setFavorite(!favorite);
-    //     isFavorite=!isFavorite;
-    // }
+    const toggleStock=(id)=>{
+        console.log(id);
+        let updatedBooks =bookData.map(b=>{
+            (b.id==id)&&(b.inStock= !b.inStock)
+            return b;
+        
+    })
+        setBookData(updatedBooks);     
+    }
+    
+    const toggleFavorite=(id)=>{
+        console.log(id);
+        let updatedBooks =bookData.map(b=> b.id===id ? {...b, isFavorite: !b.isFavorite}:b)
+        setBookData(updatedBooks);     
+    }
+    
+    const EventHandler=(id)=>{
+        console.log('read more is click', id);
+    }
 
     return(
         <>
-            <select name="" id="">
+            {/* <select name="" id="">
                 <option value="all">Show All</option>
                 <option value="favorite">Is Favorite</option>
                 <option value="notFavorite">Not favorite</option>
-            </select>
+            </select> */}
             {bookData.map(b=> (
                       <BookCard
                       key={b.id}
-                      {...b} />
+                      {...b}
+                      onEventHandler={EventHandler}
+                      onToggleStock={toggleStock}
+                      onToggleFavorite={toggleFavorite}/>
                     ))}
         </>
     )
@@ -27,8 +45,8 @@ const BookList=()=>{
 export default BookList
 
 export function Card({name, department}){
-    const departmentClass=deparment === "Engineer"
-    ?'engineer': deparment === "Design"? 'design':deparment === "Executive"?'executive':'general';
+    const departmentClass=department === "Engineer"
+    ?'engineer': department === "Design"? 'design':department === "Executive"?'executive':'general';
     return(
         <div className={`card ${departmentClass}`} >
             <h3>{name}</h3>
