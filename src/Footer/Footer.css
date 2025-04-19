@@ -1,6 +1,10 @@
-footer{
-    background:rgb(245, 197, 205);
-    height:5rem;
-    width:100%;
-  }
-  
+footer {
+  background: rgb(245, 197, 205);
+  height: 5rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  margin-top: 2rem;
+  flex-shrink: 0;
+}
