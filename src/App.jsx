@@ -1,9 +1,9 @@
 // import {useState} from'react';
 import {createBrowserRouter, RouterProvider} from "react-router";
 import './App.css';
-import Header from './components/Header/Header.jsx';
-import Footer from './components/Footer/Footer.jsx';
 import BookList from './components/Books/BookList.jsx';
+import Root from './pages/Root.jsx'
+import About from './pages/About.jsx'
 
 const router = createBrowserRouter([
   {
@@ -14,18 +14,15 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About/>,
   },
+  {
+    path: "/book",
+    element: <BookList/>,
+  },
 ]);
 
 const App=()=>{
   return(
-    <>
-      <Header logo="HL" />
-        <h1>Demo App</h1>
-      <main  >
-        <BookList/>
-      </main>
-      <Footer year={2025} />
-    </>
+    <RouterProvider router={router}/>
   )
 }
 

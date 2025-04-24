@@ -10,7 +10,7 @@ const About=()=>{
       <Header logo="HL" />
         <h1>About component</h1>
       <main  >
-        <BookList/>
+
       </main>
       <Footer year={2025} />
     </>

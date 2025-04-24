@@ -10,7 +10,6 @@ const Root=()=>{
       <Header logo="HL" />
         <h1>root component</h1>
       <main  >
-        <BookList/>
       </main>
       <Footer year={2025} />
     </>

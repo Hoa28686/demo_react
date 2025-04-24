@@ -1,3 +1,4 @@
+import {Link} from 'react-router';
 import './Header.css';
 const Header=({logo})=>{
     // console.log("this is header props: ", {logo});
@@ -6,9 +7,10 @@ const Header=({logo})=>{
         <div className="logo">{logo} </div>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+                <Link to='/'>Home</Link>
+                <Link to='/about'>About</Link>
+                <Link to='/book'>Book</Link>
+                
             </ul>
             
         </nav>
