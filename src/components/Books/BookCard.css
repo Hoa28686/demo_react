@@ -36,3 +36,7 @@ button {
   border-radius: 5px;
   border: 1px solid whitesmoke;
 }
+.bookcard-buttons{
+  border-top: 1px solid grey;
+  width:100%;
+}

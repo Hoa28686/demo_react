@@ -1,18 +1,20 @@
 import { useState } from "react";
 import BookCard from "./BookCard";
-import { books } from "./booksData";
+import { books } from "../../data/booksData";
 import "./BookList.css";
 
 const BookList = () => {
   const [bookData, setBookData] = useState(books);
   const [searchValue, setsearchValue] = useState("");
 
-  const changePrice = (id, e) => {
-    const priceValue = parseFloat(e.target.value).toFixed(2);
-    if (priceValue < 0 || isNaN(priceValue)) return;
-    setBookData((prevbook) =>
-      prevbook.map((b) => (b.id == id ? { ...b, price: priceValue } : b))
-    );
+
+  const changePrice = (id, newPrice) => {
+      setBookData((prevbook) =>
+          prevbook.map((b) => (b.id === id)
+          ? (b.price!== newPrice && newPrice!='')
+          ?{ ...b, price: parseFloat(newPrice).toFixed(2) } : b:b));
+    
+    // let newPrice = parseFloat(newPrice).toFixed(2);
   };
 
   const searchHandle = (e) => {
@@ -74,7 +76,7 @@ const BookList = () => {
             <BookCard
               key={b.id}
               {...b}
-              onChangePrice={changePrice}
+              onChangePrice={changePrice} //this function need to get newPrice from BookCard, so pass value in BookCard.jsx 
               onEventHandler={EventHandler}
               onToggleStock={toggleStock}
               onToggleFavorite={toggleFavorite}
