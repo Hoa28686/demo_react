@@ -2,8 +2,8 @@ import { useState } from "react";
 import BookCard from "./BookCard";
 import { books } from "../../data/booksData";
 import "./BookList.css";
-import AddBookForm from "../AddBookForm/AddBookForm";
-
+import AddBookForm from "../../pages/AddBookForm";
+import Header from "../Header/Header";
 const BookList = ({bookData,setBookData}) => {
   const [searchValue, setsearchValue] = useState("");
 
@@ -51,6 +51,8 @@ const BookList = ({bookData,setBookData}) => {
 
   return (
     <>
+    <Header logo="HL" />
+
       {/* <select name="" id="">
                 <option value="all">Show All</option>
                 <option value="favorite">Is Favorite</option>

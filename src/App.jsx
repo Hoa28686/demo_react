@@ -5,16 +5,16 @@ import './App.css';
 import BookList from './components/Books/BookList.jsx';
 import Root from './pages/Root.jsx'
 import About from './pages/About.jsx'
-import AddBookForm from './components/AddBookForm/AddBookForm.jsx';
-import AddBook from './pages/AddBook.jsx'
+import AddBookForm from './pages/AddBookForm.jsx';
+
 
 
 
 const App=()=>{
   const [bookData, setBookData] = useState(books);
   const addBookHandler=(newBook)=>{
-    setBookData(prev=>[...prev,
-      {...newBook,id:Date.now(),isFavorite:false,inStock:true}])
+    setBookData(prev=>([...prev,
+      {...newBook,id: Date.now(),isFavorite:false,inStock:true}]))
     console.log(bookData);
   }
 

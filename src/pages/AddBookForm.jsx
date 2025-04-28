@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { useNavigate } from 'react-router';
-import Header from '../Header/Header.jsx';
-import Footer from '../Footer/Footer.jsx';
+import Header from '../components/Header/Header.jsx';
+import Footer from '../components/Footer/Footer.jsx';
 
 const AddBookForm = ({onAddBook}) => {
     const [formData,setFormData]=useState({
@@ -23,9 +23,9 @@ const AddBookForm = ({onAddBook}) => {
         onAddBook(newBook);
 
         setFormData({title:'',author:'',price:'', genre:'',})
-        navigate('/book');
         console.log(newBook);
-
+        
+        navigate('/book');
     
        
     }
