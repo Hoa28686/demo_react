@@ -5,13 +5,10 @@ import BookList from './components/Books/BookList.jsx';
 import Root from './pages/Root.jsx'
 import About from './pages/About.jsx'
 import AddBook from './pages/AddBook.jsx'
-import AddBookForm from "./components/AddBookForm/AddBookForm.jsx";
+
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root/>,
-  },
+  {path: "/", element: <Root/>},
   {
     path: "/about",
     element: <About/>,

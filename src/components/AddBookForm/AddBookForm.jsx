@@ -11,26 +11,19 @@ const AddBookForm = ({onAddBook}) => {
     const handleChange=(e)=>{
         const {name,value}=e.target; //destructuring
         setFormData(prev=>({...prev, [name]: value}))
-        console.log(formData);
     }
     const handleAdd=(e)=>{
         e.preventDefault();
-        const newBook={
-            title:title,
-            author:author,
-            price:parseFloat(price),
-            genre:genre,
-        }
+        const newBook={...formData, price: parseFloat(formData.price)}
+
+         //call function from parent
+        //  onAddBook(newBook);
+
+        setFormData({title:'',author:'',price:'', genre:'',})
         console.log(newBook);
 
     
-        //call function from parent
-        onAddBook(newBook);
-
-        setTitle('');
-        setAuthor('');
-        setPrice('');
-        setGenre('');
+       
     }
   return (
     <form onSubmit={handleAdd} >
