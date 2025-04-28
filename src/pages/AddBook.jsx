@@ -4,7 +4,7 @@ import Header from '../components/Header/Header.jsx';
 import Footer from '../components/Footer/Footer.jsx';
 import AddBookForm from '../components/AddBookForm/AddBookForm.jsx';
 
-const About=()=>{
+const AddBook=()=>{
   return(
     <>
       <Header logo="HL" />
@@ -18,4 +18,4 @@ const About=()=>{
 }
 
 
-export default About
+export default AddBook

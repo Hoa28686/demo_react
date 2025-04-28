@@ -4,16 +4,8 @@ import { books } from "../../data/booksData";
 import "./BookList.css";
 import AddBookForm from "../AddBookForm/AddBookForm";
 
-const BookList = () => {
-  const [bookData, setBookData] = useState(books);
+const BookList = ({bookData,setBookData}) => {
   const [searchValue, setsearchValue] = useState("");
-
-  const addBook=(newBook)=>{
-    setBookData(prevBook=>
-    prevBook.push(newBook)
-    )
-    console.log(bookData);
-  }
 
   const changePrice = (id, newPrice) => {
       setBookData((prevbook) =>
@@ -87,11 +79,9 @@ const BookList = () => {
               onEventHandler={EventHandler}
               onToggleStock={toggleStock}
               onToggleFavorite={toggleFavorite} 
-    
             />
             
           ))}
-          {/* <AddBookForm onAddBook={addBook}/> */}
       </div>
     </>
   );

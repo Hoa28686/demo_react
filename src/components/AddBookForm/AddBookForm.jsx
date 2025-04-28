@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
-
+import { useNavigate } from 'react-router';
+import Header from '../Header/Header.jsx';
+import Footer from '../Footer/Footer.jsx';
 
 const AddBookForm = ({onAddBook}) => {
     const [formData,setFormData]=useState({
@@ -8,6 +10,7 @@ const AddBookForm = ({onAddBook}) => {
         price:'',
         genre:'',
     });
+    const navigate=useNavigate();
     const handleChange=(e)=>{
         const {name,value}=e.target; //destructuring
         setFormData(prev=>({...prev, [name]: value}))
@@ -17,15 +20,20 @@ const AddBookForm = ({onAddBook}) => {
         const newBook={...formData, price: parseFloat(formData.price)}
 
          //call function from parent
-        //  onAddBook(newBook);
+        onAddBook(newBook);
 
         setFormData({title:'',author:'',price:'', genre:'',})
+        navigate('/book');
         console.log(newBook);
 
     
        
     }
   return (
+    <>
+    <Header logo="HL" />
+
+     
     <form onSubmit={handleAdd} >
         <div>
         <label htmlFor="title">Title:</label>
@@ -45,6 +53,8 @@ const AddBookForm = ({onAddBook}) => {
         </div>
         <button type='submit'>Add Book</button>
     </form>
+    <Footer year={2025} />
+    </>
   )
 }
 
