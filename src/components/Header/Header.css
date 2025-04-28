@@ -22,3 +22,8 @@ gap:1rem;
     font-size:3rem;
     font-family: "Cherry Bomb One", system-ui;
   }
+
+.link-style{
+  text-decoration: none;
+  color:black;
+}

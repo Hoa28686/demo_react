@@ -2,11 +2,18 @@ import { useState } from "react";
 import BookCard from "./BookCard";
 import { books } from "../../data/booksData";
 import "./BookList.css";
+import AddBookForm from "../AddBookForm/AddBookForm";
 
 const BookList = () => {
   const [bookData, setBookData] = useState(books);
   const [searchValue, setsearchValue] = useState("");
 
+  const addBook=(newBook)=>{
+    setBookData(prevBook=>
+    prevBook.push(newBook)
+    )
+    console.log(bookData);
+  }
 
   const changePrice = (id, newPrice) => {
       setBookData((prevbook) =>
@@ -79,9 +86,12 @@ const BookList = () => {
               onChangePrice={changePrice} //this function need to get newPrice from BookCard, so pass value in BookCard.jsx 
               onEventHandler={EventHandler}
               onToggleStock={toggleStock}
-              onToggleFavorite={toggleFavorite}
+              onToggleFavorite={toggleFavorite} 
+    
             />
+            
           ))}
+          {/* <AddBookForm onAddBook={addBook}/> */}
       </div>
     </>
   );
