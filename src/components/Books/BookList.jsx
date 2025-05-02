@@ -4,15 +4,21 @@ import { books } from "../../data/booksData";
 import "./BookList.css";
 import AddBookForm from "../../pages/AddBookForm";
 import Header from "../Header/Header";
-const BookList = ({bookData,setBookData}) => {
+import Footer from "../Footer/Footer";
+const BookList = ({ bookData, setBookData }) => {
   const [searchValue, setsearchValue] = useState("");
 
   const changePrice = (id, newPrice) => {
-      setBookData((prevbook) =>
-          prevbook.map((b) => (b.id === id)
-          ? (b.price!== newPrice && newPrice!='')
-          ?{ ...b, price: parseFloat(newPrice).toFixed(2) } : b:b));
-    
+    setBookData((prevbook) =>
+      prevbook.map((b) =>
+        b.id === id
+          ? b.price !== newPrice && newPrice != ""
+            ? { ...b, price: parseFloat(newPrice).toFixed(2) }
+            : b
+          : b
+      )
+    );
+
     // let newPrice = parseFloat(newPrice).toFixed(2);
   };
 
@@ -21,7 +27,9 @@ const BookList = ({bookData,setBookData}) => {
     const searchText = searchValue.toLowerCase().trim();
     const cards = document.querySelectorAll(".card");
     cards.forEach((card) => {
-      const cardText = card.textContent.toLowerCase();
+      const cardText = card
+        .querySelector(".card-content")
+        .textContent.toLowerCase();
       cardText.includes(searchText)
         ? (card.style.display = "block")
         : (card.style.display = "none");
@@ -51,7 +59,7 @@ const BookList = ({bookData,setBookData}) => {
 
   return (
     <>
-    <Header logo="HL" />
+      <Header logo="HL" />
 
       {/* <select name="" id="">
                 <option value="all">Show All</option>
@@ -59,32 +67,34 @@ const BookList = ({bookData,setBookData}) => {
                 <option value="notFavorite">Not favorite</option>
             </select> */}
       {/* name="search" is use to identidy form element when a form is submitted */}
-      <div>
-        <label htmlFor="search">Search</label>
-        <input
-          type="text"
-          id="search"
-          name="search"
-          value={searchValue}
-          onChange={searchHandle}
-        />
-        <p>You search for: {searchValue.toLowerCase().trim()} </p>
-      </div>
-      <div className="listDisplay">
-        {bookData
-          //   .filter((b) => b.title.toLowerCase().includes(searchValue))
-          .map((b) => (
-            <BookCard
-              key={b.id}
-              {...b}
-              onChangePrice={changePrice} //this function need to get newPrice from BookCard, so pass value in BookCard.jsx 
-              onEventHandler={EventHandler}
-              onToggleStock={toggleStock}
-              onToggleFavorite={toggleFavorite} 
-            />
-            
-          ))}
-      </div>
+      <main>
+        <div>
+          <label htmlFor="search">Search</label>
+          <input
+            type="text"
+            id="search"
+            name="search"
+            value={searchValue}
+            onChange={searchHandle}
+          />
+          <p>You search for: {searchValue.toLowerCase().trim()} </p>
+        </div>
+        <div className="listDisplay">
+          {bookData
+            //   .filter((b) => b.title.toLowerCase().includes(searchValue))
+            .map((b) => (
+              <BookCard
+                key={b.id}
+                {...b}
+                onChangePrice={changePrice} //this function need to get newPrice from BookCard, so pass value in BookCard.jsx
+                onEventHandler={EventHandler}
+                onToggleStock={toggleStock}
+                onToggleFavorite={toggleFavorite}
+              />
+            ))}
+        </div>
+      </main>
+      <Footer year={2025} />
     </>
   );
 };

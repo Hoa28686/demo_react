@@ -12,6 +12,7 @@ import AddBookForm from './pages/AddBookForm.jsx';
 
 const App=()=>{
   const [bookData, setBookData] = useState(books);
+  
   const addBookHandler=(newBook)=>{
     setBookData(prev=>([...prev,
       {...newBook,id: Date.now(),isFavorite:false,inStock:true}]))

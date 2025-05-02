@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./BookCard.css";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router";
 const BookCard = ({
   title,
   author,
@@ -18,13 +18,12 @@ const BookCard = ({
   //     setFavorite(!favorite);
   //     isFavorite=!isFavorite;
   // }
-  const [isEditing, setIsediting]=useState(false);
-  const handleSave=()=>{
-    onChangePrice(id,newPrice);
+  const [isEditing, setIsediting] = useState(false);
+  const handleSave = () => {
+    onChangePrice(id, newPrice);
     setIsediting(false);
-    console.log('Save is click');
-    
-  }
+    console.log("Save is click");
+  };
   const [newPrice, setNewPrice] = useState(price);
   const eventHandler = () => {
     console.log("WOW");
@@ -34,24 +33,26 @@ const BookCard = ({
       <div className="favorite" onClick={() => onToggleFavorite(id)}>
         {isFavorite ? "⭐" : "★"}
       </div>
-      <h2> {title} </h2>
-
-      <p>--- {author} --- </p>
-      {isEditing ?
-       (
-        <div>
-        <input type="text" value={newPrice} onChange={(e)=>setNewPrice(e.target.value)} />
-        <button onClick={handleSave}>Save</button>
-  
-          </div>
-       ):
-       ( <div>
-        <span className="price">€ {price}</span>
-        <button onClick={()=>setIsediting(true)}>Edit</button>
+      <div className="card-content">
+        <h2> {title} </h2>
+        <p>--- {author} --- </p>
       </div>
-      )
-       
-}
+
+      {isEditing ? (
+        <div>
+          <input
+            type="text"
+            value={newPrice}
+            onChange={(e) => setNewPrice(e.target.value)}
+          />
+          <button onClick={handleSave}>Save</button>
+        </div>
+      ) : (
+        <div>
+          <span className="price">€ {price}</span>
+          <button onClick={() => setIsediting(true)}>Edit</button>
+        </div>
+      )}
       {/* <button onClick={()=>onToggleStock(id)}>Change Stock</button>
             <button onClick={()=>onToggleFavorite(id)}>Change favorite</button> */}
       <p
@@ -71,16 +72,13 @@ const BookCard = ({
           </button>
         )}
         <button onClick={() => onEventHandler(id)}>Read more</button>
-        {isEditing?
-        (
+        {isEditing ? (
           <button onClick={handleSave}>Save</button>
-        ):(
-          <button onClick={()=>setIsediting(true)}>Edit</button>
-        )
-      }
+        ) : (
+          <button onClick={() => setIsediting(true)}>Edit</button>
+        )}
       </div>
     </div>
   );
 };
 export default BookCard;
-
