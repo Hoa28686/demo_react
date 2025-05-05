@@ -56,7 +56,7 @@ const BookCard = ({
       {/* <button onClick={()=>onToggleStock(id)}>Change Stock</button>
             <button onClick={()=>onToggleFavorite(id)}>Change favorite</button> */}
       <p
-        style={{ color: inStock ? "#53bf33" : "red" }}
+        className={ inStock ? "stock" : "stock outOfStock" }
         onClick={() => onToggleStock(id)}
       >
         {inStock ? "In Stock" : "Out of stock"}{" "}

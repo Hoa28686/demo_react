@@ -59,15 +59,12 @@ const BookList = ({ bookData, setBookData }) => {
 
   return (
     <>
-      <Header logo="HL" />
-
       {/* <select name="" id="">
                 <option value="all">Show All</option>
                 <option value="favorite">Is Favorite</option>
                 <option value="notFavorite">Not favorite</option>
             </select> */}
       {/* name="search" is use to identidy form element when a form is submitted */}
-      <main>
         <div>
           <label htmlFor="search">Search</label>
           <input
@@ -93,8 +90,7 @@ const BookList = ({ bookData, setBookData }) => {
               />
             ))}
         </div>
-      </main>
-      <Footer year={2025} />
+
     </>
   );
 };

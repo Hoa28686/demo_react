@@ -30,8 +30,6 @@ const AddBookForm = ({ onAddBook }) => {
   };
   return (
     <>
-      <Header logo="HL" />
-      <main>
         <form onSubmit={handleAdd} className="add-book-form">
           <div>
             <label htmlFor="title">Title:</label>
@@ -76,9 +74,6 @@ const AddBookForm = ({ onAddBook }) => {
           </div>
           <button type="submit">Add Book</button>
         </form>
-      </main>
-
-      <Footer year={2025} />
     </>
   );
 };

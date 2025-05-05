@@ -27,6 +27,22 @@ input {
 .price input {
   width: 4rem;
 }
+.stock{
+  background:black ;
+  display: inline-block;
+  padding:.1rem 1rem;
+  border-radius: 5px;
+  border:1px solid black;
+  color: #53bf33;
+  position: absolute;
+  box-shadow: 0 0 .3rem grey;
+  top: -0.5rem;
+  left: -0.5rem;
+}
+.outOfStock{
+  background: rgb(195, 193, 193);
+  color:black;
+}
 .wishList,
 button {
   margin: 0.8rem;

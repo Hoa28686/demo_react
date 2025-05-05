@@ -2,14 +2,15 @@
 
 import Header from '../components/Header/Header.jsx';
 import Footer from '../components/Footer/Footer.jsx';
+import { Outlet } from 'react-router';
 
 
 const Root=()=>{
   return(
     <>
       <Header logo="HL" />
-        <h1>root component</h1>
       <main  >
+        <Outlet/>
       </main>
       <Footer year={2025} />
     </>
