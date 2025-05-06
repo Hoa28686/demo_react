@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./BookCard.css";
 import { createBrowserRouter } from "react-router";
+import axios from "axios";
 const BookCard = ({
   title,
   author,
@@ -14,6 +15,8 @@ const BookCard = ({
   onToggleFavorite,
   onChangePrice,
 }) => {
+  const [newPrice, setNewPrice] = useState(price);
+
   // const clickHandler=()=>{
   //     setFavorite(!favorite);
   //     isFavorite=!isFavorite;
@@ -24,7 +27,6 @@ const BookCard = ({
     setIsediting(false);
     console.log("Save is click");
   };
-  const [newPrice, setNewPrice] = useState(price);
   const eventHandler = () => {
     console.log("WOW");
   };
@@ -45,18 +47,18 @@ const BookCard = ({
             value={newPrice}
             onChange={(e) => setNewPrice(e.target.value)}
           />
-          <button onClick={handleSave}>Save</button>
+          {/* <button onClick={handleSave}>Save</button> */}
         </div>
       ) : (
         <div>
           <span className="price">€ {price}</span>
-          <button onClick={() => setIsediting(true)}>Edit</button>
+          {/* <button onClick={() => setIsediting(true)}>Edit</button> */}
         </div>
       )}
       {/* <button onClick={()=>onToggleStock(id)}>Change Stock</button>
             <button onClick={()=>onToggleFavorite(id)}>Change favorite</button> */}
       <p
-        className={ inStock ? "stock" : "stock outOfStock" }
+        className={inStock ? "stock" : "stock outOfStock"}
         onClick={() => onToggleStock(id)}
       >
         {inStock ? "In Stock" : "Out of stock"}{" "}

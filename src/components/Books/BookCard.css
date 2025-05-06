@@ -6,7 +6,7 @@ input {
   background: rgb(14, 21, 12);
   color: white;
   box-shadow: 0 1px 2px #555454;
-  width: 300px;
+  width: 400px;
   min-height: 250px;
   padding: 4rem 1.5rem 2rem 1.5rem;
   margin: 2rem;
@@ -27,21 +27,21 @@ input {
 .price input {
   width: 4rem;
 }
-.stock{
-  background:black ;
+.stock {
+  background: black;
   display: inline-block;
-  padding:.1rem 1rem;
+  padding: 0.1rem 1rem;
   border-radius: 5px;
-  border:1px solid black;
+  border: 1px solid black;
   color: #53bf33;
   position: absolute;
-  box-shadow: 0 0 .3rem grey;
+  box-shadow: 0 0 0.3rem grey;
   top: -0.5rem;
   left: -0.5rem;
 }
-.outOfStock{
+.outOfStock {
   background: rgb(195, 193, 193);
-  color:black;
+  color: black;
 }
 .wishList,
 button {
@@ -52,7 +52,7 @@ button {
   border-radius: 5px;
   border: 1px solid whitesmoke;
 }
-.bookcard-buttons{
+.bookcard-buttons {
   border-top: 1px solid grey;
-  width:100%;
+  width: 100%;
 }

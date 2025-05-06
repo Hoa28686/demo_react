@@ -2,16 +2,16 @@
   "books": [
     {
       "isFavorite": false,
-      "id": 1,
+      "id": "1",
       "title": "The Psychology of Money",
       "author": "Morgan Housel",
-      "price": 13.5,
+      "price": "3786.00",
       "inStock": true,
       "genre": "Finance"
     },
     {
       "isFavorite": true,
-      "id": 2,
+      "id": "2",
       "title": "Atomic Habits",
       "author": "James Clear",
       "price": 19.99,
@@ -20,7 +20,7 @@
     },
     {
       "isFavorite": false,
-      "id": 3,
+      "id": "3",
       "title": "The Let Them Theory",
       "author": "Mel Robbins",
       "price": 10.5,
@@ -29,7 +29,7 @@
     },
     {
       "isFavorite": true,
-      "id": 4,
+      "id": "4",
       "title": "Educated",
       "author": "Tara Westover",
       "price": 17.5,
@@ -38,7 +38,7 @@
     },
     {
       "isFavorite": false,
-      "id": 5,
+      "id": "5",
       "title": "The Hobbit",
       "author": "J.R.R. Tolkien",
       "price": 12.5,
@@ -47,16 +47,16 @@
     },
     {
       "isFavorite": false,
-      "id": 6,
+      "id": "6",
       "title": "Sapiens",
       "author": "Yuval Noah Harari",
-      "price": 22.0,
+      "price": 22,
       "inStock": true,
       "genre": "History"
     },
     {
       "isFavorite": true,
-      "id": 7,
+      "id": "7",
       "title": "Becoming",
       "author": "Michelle Obama",
       "price": 18.75,
@@ -65,16 +65,16 @@
     },
     {
       "isFavorite": false,
-      "id": 8,
+      "id": "8",
       "title": "Dune",
       "author": "Frank Herbert",
-      "price": 15.0,
+      "price": 15,
       "inStock": false,
       "genre": "Science Fiction"
     },
     {
       "isFavorite": false,
-      "id": 9,
+      "id": "9",
       "title": "The Alchemist",
       "author": "Paulo Coelho",
       "price": 11.99,
@@ -83,12 +83,39 @@
     },
     {
       "isFavorite": false,
-      "id": 10,
+      "id": "10",
       "title": "The Silent Patient",
       "author": "Alex Michaelides",
       "price": 14.99,
       "inStock": true,
       "genre": "Thriller"
+    },
+    {
+      "id": "1746530464627",
+      "title": "qweq",
+      "author": "qweqw",
+      "price": "1223.00",
+      "genre": "wrer",
+      "isFavorite": false,
+      "inStock": true
+    },
+    {
+      "id": "1746530732118",
+      "title": "aqweqw",
+      "author": "qweq",
+      "price": 123,
+      "genre": "qeqwe",
+      "isFavorite": false,
+      "inStock": true
+    },
+    {
+      "id": "1746530781283",
+      "title": "qwe",
+      "author": "qrqrewr",
+      "price": "1157123.00",
+      "genre": "sdfadf",
+      "isFavorite": false,
+      "inStock": true
     }
   ]
 }
