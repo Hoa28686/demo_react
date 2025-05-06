@@ -14,7 +14,7 @@ const Todos = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then(setUsers) //shorthand for then(data => setUsers(data))
-      .catch(console.error)
+      .catch((error) => console.error("Axios error: ", error))
       .finally(() => setLoading(false));
   }, []);
   console.log("todo: ", todos);
@@ -41,7 +41,7 @@ const Todos = () => {
           <h3>Todos: </h3>
           {todos
             .filter((t) => t.userId === u.id)
-            .sort((a, b) => a.completed - b.completed)
+            .sort((a, b) => a.completed - b.completed) //false=0, true=1
             .map((t) => {
               if (t.completed) {
                 return <p>{t.title} ✅ </p>;
